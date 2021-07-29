@@ -61,7 +61,7 @@ def gender(g):
 
 def load_data(test_size=0.2):
     x,y=[],[]
-    for file in tqdm(glob.glob("your_data_path")):
+    for file in tqdm(glob.glob("your_data_path_with_filename")):
         file_name=os.path.basename(file)
         emotion=emotions[file_name.split("-")[2]] + '_' + gender(file_name.split("-")[-1])
         feature=extract_feature(file)
